@@ -67,11 +67,15 @@ local bg_tasklist = function(s)
 		screen = s,
 		filter = awful.widget.tasklist.filter.currenttags,
 		buttons = tasklist_buttons,
-		opacity = 1.0,
-		shape = gears.shape.rounded_rect,
+		-- opacity = 0.1,
+		shape = gears.shape.circle,
 		style = {
 			font = thm.font_large,
-			shape_border_width = 0,
+			-- shape_border_width = 0,
+			-- shape_border_width = 10,
+			-- shape_border_color = "#0f0777",
+			-- shape = gears.shape.rounded_bar,
+
 			-- shape_border_color = thm.xmain_1,
 			-- bg_activity           = '#D84315',
 			fg_activity = "#D84315",
@@ -136,6 +140,7 @@ local primary_tasklist = function(s)
 		filter = meta_filter_cur_tags,
 		buttons = tasklist_buttons,
 		style = {
+			-- opacity = 0.7,
 			mtype = "PRIM",
 		},
 		-- shape = gears.shape.circle,
