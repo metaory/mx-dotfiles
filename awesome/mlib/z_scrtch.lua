@@ -1,0 +1,17 @@
+
+-- local popcorn      = "popcorntime"
+-- local whatsapp     = "vivaldi-stable --app=https://web.whatsapp.com"
+-- local telegram     = "telegram-desktop"
+-- local ctbgit       = "vivaldi-stable --app=https://github.com/catchthatbus/ebus-xp/branches/all"
+-- local deluge       = "deluge"
+-- local torrent      = "transmission-gtk"
+-- local browser      = "vivaldi-stable" -- geometry 903x550+187+132
+-- local browserr     = "vivaldi-stable --app=https://github.com/catchthatbus/ebus-xp/branches/all"
+-- local postman      = "vivaldi-stable --app-id=fhbjgbiflinjbdggehcddcbncdddomop --profile-directory=Default"
+-- local irc          = "hexchat"
+-- local ranger       = "env PAGER=nvimpager env EDITOR=nvim " .. terminal .. ala_opt_center .. " --title ranger -e ranger"
+-- local webstorm     = "webstorm"
+-- local __mfz        = "kitty  -o 'initial_window_height 20c'  -o 'initial_window_width 70c' --class=MFZ"
+-- local mfz_cmd      = __mfz ..  " -e sh -c 'compgen -c | sort -u | fzf --color=16 --border | sh'"
+-- local mfz_cmd      = " 'compgen -c | sort -u | fzf --color=bw --reverse --border | sh'"
+-- kitty  -o 'initial_window_height 20c'  -o 'initial_window_width 70c' --class=MFZ -e sh -c 'compgen -c | sort -u | fzf --color=bw --reverse --border | sh'
