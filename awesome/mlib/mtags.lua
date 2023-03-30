@@ -1,5 +1,6 @@
 local awful = require("awful")
 local gears = require("gears")
+local theme = require("beautiful")
 
 local mtags = {}
 mtags.taglist_buttons = gears.table.join(
@@ -41,15 +42,24 @@ mtags.on_screen_connect = function(s)
 	-- #          ﰋ ﱦ ﲯ ﲵ ﮊ 
 	-- ⛛ ⛬  🞇 🙼  ░ 卑喝 ﯸ ﯹ ﯹ ﯻ ﯼ ﰩ  ▼ |    
 	-- mtags.tags = {
-	awful.tag.add("", --[[ 1 ]] { layout = awful.layout.suit.floating, screen = s, selected = true })
-	awful.tag.add("更", --[[ 2 ]] { layout = awful.layout.suit.tile.right, screen = s })
-	awful.tag.add("", --[[ 3 ]] { layout = awful.layout.suit.max, screen = s })
-	awful.tag.add("", --[[ 4 ]] { layout = awful.layout.suit.max, screen = s })
-	awful.tag.add("", --[[ 5 ]] { layout = awful.layout.suit.cascade, screen = s })
-	awful.tag.add("", --[[ 6 ]] { layout = awful.layout.suit.max, screen = s })
-	awful.tag.add("", --[[ 7 ]] { layout = awful.layout.suit.fair.horizontal, screen = s })
-	awful.tag.add("", --[[ 8 ]] { layout = awful.layout.suit.corner.sw, screen = s })
-	awful.tag.add("", --[[ 9 ]] { layout = awful.layout.suit.max, screen = s })
+	awful.tag.add("  ", --[[ 1 ]] {
+		layout = awful.layout.suit.floating,
+		-- width = 99,
+		-- forced_width = 99,
+		-- margins = 99,
+		screen = s,
+		selected = true,
+		-- gap = 95,
+		-- icon = "",
+	})
+	awful.tag.add(" 更 ", --[[ 2 ]] { layout = awful.layout.suit.tile.right, screen = s })
+	awful.tag.add("  ", --[[ 3 ]] { layout = awful.layout.suit.max, screen = s })
+	awful.tag.add("  ", --[[ 4 ]] { layout = awful.layout.suit.max, screen = s })
+	awful.tag.add("  ", --[[ 5 ]] { layout = awful.layout.suit.cascade, screen = s })
+	awful.tag.add("  ", --[[ 6 ]] { layout = awful.layout.suit.max, screen = s })
+	awful.tag.add("  ", --[[ 7 ]] { layout = awful.layout.suit.fair.horizontal, screen = s })
+	awful.tag.add("  ", --[[ 8 ]] { layout = awful.layout.suit.corner.sw, screen = s })
+	awful.tag.add(" ", --[[ 9 ]] { layout = awful.layout.suit.max, screen = s })
 	-- }
 end
 

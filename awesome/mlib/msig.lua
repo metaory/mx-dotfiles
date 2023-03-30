@@ -411,7 +411,8 @@ msig.sconnect = function(...)
 
 		-- forced_height = 200,
 		style = {
-			shape = gears.shape.rounded_rect,
+			shape = gears.shape.rounded_bar,
+			spacing = 0,
 		},
 		layout = wibox.layout.fixed.horizontal,
 
@@ -431,18 +432,20 @@ msig.sconnect = function(...)
 		opacity = 0.7,
 		--height = 42
 		stretch = false,
-		width = s.workarea.width - 50,
-		height = 70,
+		width = s.workarea.width - 120,
+		height = 60,
 		-- opacity = 0.7,
 		-- y = 200,
+		-- x = 10,
 		-- shape = gears.shape.rounded_rect, -- rounded_bar
 		shape = _shape_hard,
 
 		-- shape = round_shape,
 		-- shape = gears.shape.rounded_rect,
 		-- shape_clip = gears.shape.rounded_rect,
-		border_width = 16,
+		border_width = 20,
 		-- border_color = "#4527A0",
+		-- type = "normal",
 		optop = true,
 	}) -- ,  height = 42
 
@@ -514,7 +517,6 @@ msig.sconnect = function(...)
 			layout = wibox.layout.fixed.horizontal,
 			mysepx,
 			-- s.mytaglist,
-			-- spacing = mysepx,
 			-- widget = wibox.widget.separator,
 			mtagswidget,
 			-- shape = gears.shape.circle,

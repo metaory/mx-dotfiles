@@ -137,7 +137,7 @@ local font_focus = ffa .. "r 12"
 -- local font_focus   = ffp ..     "Bold "..(fs+math.floor(1*  2))  -- 2)
 local font_large = ffa .. "Bold " .. (fs + math.floor(1 * 6)) -- 8)
 local font_black = ffw .. "Bold " .. (fs + math.floor(1 * 14)) -- 16)
-theme.taglist_font = ffi .. "Bold " .. (fs + math.floor(1 * 12)) -- 8)
+theme.taglist_font = ffi .. "Bold " .. (fs + math.floor(1 * 6)) -- 8)
 theme.font_widget = ffw .. "Bold 8"
 
 theme.font = font_large
@@ -450,8 +450,8 @@ theme.snap_shape = gears.shape.rounded_rect
 theme.snap_bg = theme.green_d
 -- theme.snap_default_distance          = 100
 theme.snap_border_width = 20
-theme.menu_border_width = 16
-theme.border_width = 16
+theme.menu_border_width = 20
+theme.border_width = 20
 
 theme.snapper_gap = 10
 theme.useless_gap = 8
@@ -508,7 +508,7 @@ theme.taglist_bg_focus = theme.bg_focus
 theme.taglist_fg_focus = xc.wbg -- theme.blue_d
 theme.taglist_bg_volatile = theme.bg_focus
 theme.taglist_fg_volatile = theme.yellow_d
-
+-- theme.taglist_shape_border_width_focus = 99
 theme.taglist_spacing = 4
 theme.taglist_squares_resize = true
 -- theme.taglist_shape_border_width   = 34
