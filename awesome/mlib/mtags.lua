@@ -43,7 +43,7 @@ mtags.on_screen_connect = function(s)
 	-- ⛛ ⛬  🞇 🙼  ░ 卑喝 ﯸ ﯹ ﯹ ﯻ ﯼ ﰩ  ▼ |    
 	-- mtags.tags = {
 	awful.tag.add("", --[[ 1 ]] {
-		layout = awful.layout.suit.floating,
+		layout = awful.layout.suit.max,
 		-- width = 99,
 		-- forced_width = 99,
 		-- margins = 99,
