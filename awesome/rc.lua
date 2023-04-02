@@ -81,6 +81,7 @@ term_mtx = " "
 term_uno = " "
 term_mst = " "
 terminal = "kitty "
+-- terminal = "alacritty "
 
 term_kitty = "kitty"
 term_termite = "termite"

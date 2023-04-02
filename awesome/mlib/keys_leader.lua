@@ -123,7 +123,7 @@ local web_keys = leader.bind_actions({
 	{
 		"a",
 		with_wrapper.chromium(
-			"https://nyaa.si/?f=0&c=1_2&q=720 https://nyaa.si/?f=0&c=1_2&q=SubsPlease+720 https://anilist.co/search/anime?year=2023&season=WINTER https://anilist.co/search/anime?year=2022&season=FALL https://anilist.co/search/anime?airing%20status=RELEASING https://www.tokyotosho.info/search.php"
+			"https://nyaa.si/?f=0&c=1_2&q=720 https://nyaa.si/?f=0&c=1_2&q=SubsPlease+720 https://anilist.co/search/anime?year=2023&season=SPRING https://anilist.co/search/anime?year=2023&season=WINTER https://anilist.co/search/anime?year=2022&season=FALL https://anilist.co/search/anime?airing%20status=RELEASING https://www.tokyotosho.info/search.php"
 		),
 		"anilist",
 	},

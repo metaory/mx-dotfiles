@@ -96,6 +96,30 @@ lain.widget.bat({
 		bat.widget:set_color(xc.ebg)
 	end,
 })
+local batx = {
+	bat,
+	{
+		{
+			{ text = "", widget = wibox.widget.textbox },
+			forced_height = shape_fh,
+			bg = colors.bat,
+			-- shape = gears.shape.rounded_rect,
+			widget = wibox.container.background,
+			fill_space = true,
+		},
+		left = mg_lr,
+		right = mg_lr,
+		top = mg_tb,
+		bottom = mg_tb,
+		widget = wibox.container.margin,
+	},
+	forced_num_cols = 1,
+	forced_num_rows = 2,
+	homogeneous = false,
+	expand = true,
+	spacing = shape_sp,
+	layout = wibox.layout.grid,
+}
 -- ----------------------------------------------------------------
 -- Coretemp
 local temp = wibox.widget({
@@ -106,12 +130,35 @@ local temp = wibox.widget({
 		forced_height = thm.progressbar_width,
 		margins = { top = mg_lr, bottom = mg_lr, left = mg_tb, right = mg_tb },
 		widget = wibox.widget.progressbar,
-		-- border_width = 10,
-		-- border_color = "#0000f0",
 	},
 	direction = "east",
 	widget = wibox.container.rotate,
 })
+local tempx = wibox.widget({
+	{
+		{ text = "", widget = wibox.widget.textbox },
+		forced_height = shape_fh,
+		bg = colors.temp,
+		widget = wibox.container.background,
+		fill_space = true,
+	},
+	left = mg_lr,
+	right = mg_lr,
+	top = mg_tb,
+	bottom = mg_tb,
+	widget = wibox.container.margin,
+})
+local tempz = {
+	temp,
+	tempx,
+	forced_num_cols = 1,
+	forced_num_rows = 2,
+	homogeneous = false,
+	expand = true,
+	spacing = shape_sp,
+	layout = wibox.layout.grid,
+}
+local spawnWidget = wibox.widget({})
 awful.tooltip({
 	objects = { temp },
 	timer_function = function()
@@ -193,6 +240,31 @@ lain.widget.cpu({
 		cpu.widget:set_color(get_color(cpu_now.usage, colors.cpu, true))
 	end,
 })
+local cpux = {
+	cpu,
+	{
+		{
+			{ text = "", widget = wibox.widget.textbox },
+			forced_height = shape_fh,
+			bg = colors.cpu,
+			-- shape = gears.shape.rectangle,
+			-- bar_shape = gears.shape.rectangle,
+			widget = wibox.container.background,
+			fill_space = true,
+		},
+		left = mg_lr,
+		right = mg_lr,
+		top = mg_tb,
+		bottom = mg_tb,
+		widget = wibox.container.margin,
+	},
+	forced_num_cols = 1,
+	forced_num_rows = 2,
+	homogeneous = false,
+	expand = true,
+	spacing = shape_sp,
+	layout = wibox.layout.grid,
+}
 -- ----------------------------------------------------------------
 -- MEM
 local mem = wibox.widget({
@@ -220,6 +292,30 @@ lain.widget.mem({
 		mem.widget:set_color(get_color(mem_now.perc, colors.mem, true))
 	end,
 })
+local memx = {
+	{
+		{
+			{ text = "", widget = wibox.widget.textbox },
+			forced_height = shape_fh,
+			bg = colors.mem,
+			-- shape = gears.shape.rounded_rect,
+			-- shape = gears.shape.radial_rounded_rect,
+			widget = wibox.container.background,
+			fill_space = true,
+		},
+		left = mg_lr,
+		right = mg_lr,
+		top = mg_tb,
+		bottom = mg_tb,
+		widget = wibox.container.margin,
+	},
+	forced_num_cols = 1,
+	forced_num_rows = 2,
+	homogeneous = false,
+	expand = true,
+	spacing = shape_sp,
+	layout = wibox.layout.grid,
+}
 -- ----------------------------------------------------------------
 -- ----------------------------------------------------------------
 -- ALSA
@@ -257,6 +353,30 @@ thm.volume = lain.widget.alsa({
 		)
 	end,
 })
+local alsabarx = {
+	alsabar,
+	{
+		{
+			{ text = "", widget = wibox.widget.textbox },
+			forced_height = shape_fh,
+			bg = colors.alsabar,
+			-- shape = gears.shape.rounded_rect,
+			widget = wibox.container.background,
+			fill_space = true,
+		},
+		left = mg_lr,
+		right = mg_lr,
+		top = mg_tb,
+		bottom = mg_tb,
+		widget = wibox.container.margin,
+	},
+	forced_num_cols = 1,
+	forced_num_rows = 2,
+	homogeneous = false,
+	expand = true,
+	spacing = shape_sp,
+	layout = wibox.layout.grid,
+}
 -- ----------------------------------------------------------------
 -- Net
 local netdown = wibox.widget({
@@ -272,6 +392,30 @@ local netdown = wibox.widget({
 	direction = "east",
 	widget = wibox.container.rotate,
 })
+local netdownx = {
+	netdown,
+	{
+		{
+			{ text = "", widget = wibox.widget.textbox },
+			forced_height = shape_fh,
+			bg = colors.net,
+			-- shape = gears.shape.rounded_rect,
+			widget = wibox.container.background,
+			fill_space = true,
+		},
+		left = mg_lr,
+		right = mg_lr,
+		top = mg_tb,
+		bottom = mg_tb,
+		widget = wibox.container.margin,
+	},
+	forced_num_cols = 1,
+	forced_num_rows = 2,
+	homogeneous = false,
+	expand = true,
+	spacing = shape_sp,
+	layout = wibox.layout.grid,
+}
 local netup = wibox.widget({
 	{
 		max_value = 10,
@@ -298,6 +442,30 @@ awful.tooltip({
 			.. markup.fontfg(thm.font, get_color(net_now.sent, colors.net, true), " " .. net_now.sent .. "kb")
 	end,
 })
+local netupx = {
+	netup,
+	{
+		{
+			{ text = "", widget = wibox.widget.textbox },
+			forced_height = shape_fh,
+			bg = colors.net,
+			-- shape = gears.shape.rounded_rect,
+			widget = wibox.container.background,
+			fill_space = true,
+		},
+		left = mg_lr,
+		right = mg_lr,
+		top = mg_tb,
+		bottom = mg_tb,
+		widget = wibox.container.margin,
+	},
+	forced_num_cols = 1,
+	forced_num_rows = 2,
+	homogeneous = false,
+	expand = true,
+	spacing = shape_sp,
+	layout = wibox.layout.grid,
+}
 lain.widget.net({
 	settings = function()
 		-- if iface ~= "network off" and
@@ -338,6 +506,31 @@ lain.widget.sysload({
 		sysload.widget:set_color(get_color(load_1 * 10, colors.sysload, true))
 	end,
 })
+local sysloadx = {
+	sysload,
+	{
+		{
+			{ text = "", widget = wibox.widget.textbox },
+			forced_height = shape_fh,
+			bg = colors.sysload,
+			-- shape = gears.shape.rounded_rect,
+			-- shape = new_shape,
+			widget = wibox.container.background,
+			fill_space = true,
+		},
+		left = mg_lr,
+		right = mg_lr,
+		top = mg_tb,
+		bottom = mg_tb,
+		widget = wibox.container.margin,
+	},
+	forced_num_cols = 1,
+	forced_num_rows = 2,
+	homogeneous = false,
+	expand = true,
+	spacing = shape_sp,
+	layout = wibox.layout.grid,
+}
 --[[-- ----------------------------------------------------------------]]
 -- ////////////////////////////////////////////////////////////////
 -- ----------------------------------------------------------------
@@ -424,18 +617,19 @@ msig.sconnect = function(...)
 	-- s.mytaglist = mtagswidget
 	s.mywibox = awful.wibar({
 		-- bgimage = img,
-		-- type='window',
-		position = "top",
+		-- type = "desktop", -- desktop, normal, dock,
+		-- y = 200,
+		-- x = 300,
+		stretch = false,
+		-- position = "top",
 		-- position = "bottom",
 		screen = s,
 		-- opacity = 1,
 		opacity = 0.7,
 		--height = 42
-		stretch = false,
 		width = s.workarea.width - 120,
 		height = 60,
 		-- opacity = 0.7,
-		-- y = 200,
 		-- x = 10,
 		-- shape = gears.shape.rounded_rect, -- rounded_bar
 		shape = _shape_hard,
@@ -444,7 +638,7 @@ msig.sconnect = function(...)
 		-- shape = gears.shape.rounded_rect,
 		-- shape_clip = gears.shape.rounded_rect,
 		border_width = 20,
-		-- border_color = "#4527A0",
+		-- border_color = thm.border_focus,
 		-- type = "normal",
 		optop = true,
 	}) -- ,  height = 42
@@ -479,7 +673,11 @@ msig.sconnect = function(...)
 
 	local mysepz = {
 		{
-			{ forced_width = 8, shape = gears.shape.rounded_rect, widget = wibox.widget.separator },
+			{
+				forced_width = 8,
+				shape = gears.shape.rounded_rect,
+				widget = wibox.widget.separator,
+			},
 			fg = thm.xshade_0,
 			opacity = 0.2,
 			widget = wibox.container.background,
@@ -495,278 +693,68 @@ msig.sconnect = function(...)
 	mysystray.forced_height = 98
 	mysystray:set_base_size(48)
 
+	local systrayx = {
+		mysystray,
+		-- margins = 12,
+		top = 12,
+		widget = wibox.container.margin,
+	}
+
 	-- local round_shape = function(cr, width, height)
 	-- 	gears.shape.circle(cr, width, height, 40)
 	-- end
 
+	local spawnWidget = wibox.widget({
+		layout = wibox.layout.fixed.horizontal,
+		mysepx,
+		mtagswidget,
+		s.spawnPromptWidget,
+	})
+	--[[
+	local bg = wibox.container.background()
+	bg.bg = "#ff0000"
+	local tb1 = wibox.widget.textbox("foo")
+	local tb2 = wibox.widget.textbox("bar")
+	tb1.text = "foo"
+	tb2.text = "bar"
+	local l = wibox.layout.fixed.vertical()
+	l:add(tb1)
+	l:add(tb2)
+	bg.widget = l
+]]
+	--[[
+	local bg = wibox.widget({
+		{
+			{
+				text = "foo",
+				widget = wibox.widget.textbox,
+			},
+			{
+				text = "bar",
+				widget = wibox.widget.textbox,
+			},
+			layout = wibox.layout.fixed.vertical,
+		},
+		bg = "#ff0000",
+		widget = wibox.container.background,
+	})
+]]
 	s.mywibox:setup({
 		layout = wibox.layout.align.horizontal,
-		-- shape = gears.shape.circle,
-		-- spacing = -12,
-		-- spacing_widget = {
-		-- 	color = "#ff0000",
-		-- 	shape = gears.shape.powerline,
-		-- 	widget = wibox.widget.separator,
-		-- },
-		-- {
-		-- 	layout = wibox.layout.fixed.horizontal,
-		-- 	mysepx,
-		-- },
-
-		{
-			layout = wibox.layout.fixed.horizontal,
-			mysepx,
-			-- s.mytaglist,
-			-- widget = wibox.widget.separator,
-			mtagswidget,
-			-- shape = gears.shape.circle,
-			s.spawnPromptWidget,
-			-- spacing = 5,
-		},
-		-- { },
-		-- style = {
-		-- 	shape = gears.shape.circle,
-		-- },
+		spawnWidget,
 		mtasklist.primary_tasklist(s),
 		{
 			layout = wibox.layout.fixed.horizontal,
 			mysepz,
-			-- memory.widget,
-			-- ///////////////////////////////
-			-- ///////////////////////////////
-			{
-				temp,
-				{
-					{
-						{ text = "", widget = wibox.widget.textbox },
-						forced_height = shape_fh,
-						bg = colors.temp,
-						-- shape = gears.shape.rounded_rect,
-						widget = wibox.container.background,
-						fill_space = true,
-					},
-					left = mg_lr,
-					right = mg_lr,
-					top = mg_tb,
-					bottom = mg_tb,
-					widget = wibox.container.margin,
-				},
-				forced_num_cols = 1,
-				forced_num_rows = 2,
-				homogeneous = false,
-				expand = true,
-				spacing = shape_sp,
-				layout = wibox.layout.grid,
-			},
-			-- ///////////////////////////////
-			{
-				sysload,
-				{
-					{
-						{ text = "", widget = wibox.widget.textbox },
-						forced_height = shape_fh,
-						bg = colors.sysload,
-						-- shape = gears.shape.rounded_rect,
-						-- shape = new_shape,
-						widget = wibox.container.background,
-						fill_space = true,
-					},
-					left = mg_lr,
-					right = mg_lr,
-					top = mg_tb,
-					bottom = mg_tb,
-					widget = wibox.container.margin,
-				},
-				forced_num_cols = 1,
-				forced_num_rows = 2,
-				homogeneous = false,
-				expand = true,
-				spacing = shape_sp,
-				layout = wibox.layout.grid,
-			},
-			-- ///////////////////////////////
-			-- {
-			--     fs,
-			--     {
-			--         {
-			--             { text = '', widget = wibox.widget.textbox, },
-			--             forced_height = shape_fh,
-			--             bg = colors.fs,
-			--             shape = gears.shape.rectangle,
-			--             widget = wibox.container.background,
-			--             fill_space = true,
-			--         },
-			--         left = mg_lr, right = mg_lr, top = mg_tb, bottom = mg_tb,
-			--         widget = wibox.container.margin
-			--     },
-			--     forced_num_cols = 1,
-			--     forced_num_rows = 2,
-			--     homogeneous = false,
-			--     expand = true,
-			--     spacing = shape_sp,
-			--     layout = wibox.layout.grid
-			-- },
-			-- ///////////////////////////////
-			{
-				netup,
-				{
-					{
-						{ text = "", widget = wibox.widget.textbox },
-						forced_height = shape_fh,
-						bg = colors.net,
-						-- shape = gears.shape.rounded_rect,
-						widget = wibox.container.background,
-						fill_space = true,
-					},
-					left = mg_lr,
-					right = mg_lr,
-					top = mg_tb,
-					bottom = mg_tb,
-					widget = wibox.container.margin,
-				},
-				forced_num_cols = 1,
-				forced_num_rows = 2,
-				homogeneous = false,
-				expand = true,
-				spacing = shape_sp,
-				layout = wibox.layout.grid,
-			},
-			{
-				netdown,
-				{
-					{
-						{ text = "", widget = wibox.widget.textbox },
-						forced_height = shape_fh,
-						bg = colors.net,
-						-- shape = gears.shape.rounded_rect,
-						widget = wibox.container.background,
-						fill_space = true,
-					},
-					left = mg_lr,
-					right = mg_lr,
-					top = mg_tb,
-					bottom = mg_tb,
-					widget = wibox.container.margin,
-				},
-				forced_num_cols = 1,
-				forced_num_rows = 2,
-				homogeneous = false,
-				expand = true,
-				spacing = shape_sp,
-				layout = wibox.layout.grid,
-			},
-			-- ///////////////////////////////
-			{
-				cpu,
-				{
-					{
-						{ text = "", widget = wibox.widget.textbox },
-						forced_height = shape_fh,
-						bg = colors.cpu,
-						-- shape = gears.shape.rectangle,
-						-- bar_shape = gears.shape.rectangle,
-						widget = wibox.container.background,
-						fill_space = true,
-					},
-					left = mg_lr,
-					right = mg_lr,
-					top = mg_tb,
-					bottom = mg_tb,
-					widget = wibox.container.margin,
-				},
-				forced_num_cols = 1,
-				forced_num_rows = 2,
-				homogeneous = false,
-				expand = true,
-				spacing = shape_sp,
-				layout = wibox.layout.grid,
-			},
-			-- ///////////////////////////////
-			{
-				mem,
-				{
-					{
-						{ text = "", widget = wibox.widget.textbox },
-						forced_height = shape_fh,
-						bg = colors.mem,
-						-- shape = gears.shape.rounded_rect,
-						-- shape = gears.shape.radial_rounded_rect,
-						widget = wibox.container.background,
-						fill_space = true,
-					},
-					left = mg_lr,
-					right = mg_lr,
-					top = mg_tb,
-					bottom = mg_tb,
-					widget = wibox.container.margin,
-				},
-				forced_num_cols = 1,
-				forced_num_rows = 2,
-				homogeneous = false,
-				expand = true,
-				spacing = shape_sp,
-				layout = wibox.layout.grid,
-			},
-			-- ///////////////////////////////
-			{
-				alsabar,
-				{
-					{
-						{ text = "", widget = wibox.widget.textbox },
-						forced_height = shape_fh,
-						bg = colors.alsabar,
-						-- shape = gears.shape.rounded_rect,
-						widget = wibox.container.background,
-						fill_space = true,
-					},
-					left = mg_lr,
-					right = mg_lr,
-					top = mg_tb,
-					bottom = mg_tb,
-					widget = wibox.container.margin,
-				},
-				forced_num_cols = 1,
-				forced_num_rows = 2,
-				homogeneous = false,
-				expand = true,
-				spacing = shape_sp,
-				layout = wibox.layout.grid,
-			},
-			{
-				bat,
-				{
-					{
-						{ text = "", widget = wibox.widget.textbox },
-						forced_height = shape_fh,
-						bg = colors.bat,
-						-- shape = gears.shape.rounded_rect,
-						widget = wibox.container.background,
-						fill_space = true,
-					},
-					left = mg_lr,
-					right = mg_lr,
-					top = mg_tb,
-					bottom = mg_tb,
-					widget = wibox.container.margin,
-				},
-				forced_num_cols = 1,
-				forced_num_rows = 2,
-				homogeneous = false,
-				expand = true,
-				spacing = shape_sp,
-				layout = wibox.layout.grid,
-			},
-			-- ///////////////////////////////
-
-			-- mmemwidget,
-			-- mbatwidget,
-			-- mysepz,
-			{
-				mysystray,
-				-- margins = 12,
-				top = 12,
-				widget = wibox.container.margin,
-			},
+			tempz,
+			sysloadx,
+			netdownx,
+			netupx,
+			cpux,
+			memx,
+			alsabarx,
+			batx,
+			systrayx,
 			mysepz,
 			mytextclock,
 			s.mylayoutbox,
@@ -790,6 +778,12 @@ msig.mmanage_border = function(c)
 	elseif c.urgent then
 		c.border_color = thm.border_urgent
 	else
+		-- TODO:
+		-- awful.taglist.filter.all = function(c)
+		-- gears.debug.print_warning(screen)
+		-- end
+		gears.debug.print_warning("##  [[ SET BORDER ELSE ]]  ##")
+		-- gears.debug.print_warning(awful.taglist.filter.all)
 		c.border_color = thm.border_normal
 	end
 end

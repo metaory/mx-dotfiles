@@ -215,7 +215,7 @@ _mr.setrules = function(...)
 		{
 			rule_any = { instance = { "github.com" } },
 			properties = {
-				floating = true,
+				floating = false,
 				x = awful.screen.focused().workarea.width * 0.1,
 				y = awful.screen.focused().workarea.height * 0.08,
 				width = awful.screen.focused().workarea.width * 0.8,
