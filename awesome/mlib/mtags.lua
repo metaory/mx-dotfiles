@@ -52,14 +52,14 @@ mtags.on_screen_connect = function(s)
 		-- gap = 95,
 		-- icon = "",
 	})
-	awful.tag.add("更", --[[ 2 ]] { layout = awful.layout.suit.tile.right, screen = s })
-	awful.tag.add("", --[[ 3 ]] { layout = awful.layout.suit.max, screen = s })
-	awful.tag.add("", --[[ 4 ]] { layout = awful.layout.suit.max, screen = s })
-	awful.tag.add("", --[[ 5 ]] { layout = awful.layout.suit.cascade, screen = s })
-	awful.tag.add("", --[[ 6 ]] { layout = awful.layout.suit.max, screen = s })
-	awful.tag.add("", --[[ 7 ]] { layout = awful.layout.suit.fair.horizontal, screen = s })
-	awful.tag.add("", --[[ 8 ]] { layout = awful.layout.suit.corner.sw, screen = s })
-	awful.tag.add("", --[[ 9 ]] { layout = awful.layout.suit.max, screen = s })
+	awful.tag.add(" 更", --[[ 2 ]] { layout = awful.layout.suit.tile.right, screen = s })
+	awful.tag.add("  ", --[[ 3 ]] { layout = awful.layout.suit.max, screen = s })
+	awful.tag.add("  ", --[[ 4 ]] { layout = awful.layout.suit.max, screen = s })
+	awful.tag.add("  ", --[[ 5 ]] { layout = awful.layout.suit.cascade, screen = s })
+	awful.tag.add("  ", --[[ 6 ]] { layout = awful.layout.suit.max, screen = s })
+	awful.tag.add("  ", --[[ 7 ]] { layout = awful.layout.suit.fair.horizontal, screen = s })
+	awful.tag.add("  ", --[[ 8 ]] { layout = awful.layout.suit.corner.sw, screen = s })
+	awful.tag.add("  ", --[[ 9 ]] { layout = awful.layout.suit.max, screen = s })
 	-- }
 end
 

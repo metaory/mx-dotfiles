@@ -40,7 +40,7 @@ local xrndr_keys = leader.bind_actions({
 	{ "1", with_wrapper.shell("./dev/meta/mxrandr/f1-laptop.sh"), "xrnd-F1" },
 	{ "2", with_wrapper.shell("./dev/meta/mxrandr/f2-screen.sh"), "xrnd-F2" },
 	{ "3", with_wrapper.shell("./dev/meta/mxrandr/f3-dual.sh"), "xrnd-F3" },
-	{ "4", with_wrapper.shell("./dev/meta/TODO"), "WORK" },
+	{ "4", with_wrapper.shell("./.screenlayout/dual.sh"), "WORK" },
 	{ "h", with_wrapper.shell("./dev/meta/mxrandr/f4-single-hd.sh"), "xrnd-HD" },
 })
 local kill_keys = leader.bind_actions({

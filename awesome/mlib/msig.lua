@@ -620,6 +620,7 @@ msig.sconnect = function(...)
 		-- type = "desktop", -- desktop, normal, dock,
 		-- y = 200,
 		-- x = 300,
+		-- spacing = 90,
 		stretch = false,
 		-- position = "top",
 		-- position = "bottom",

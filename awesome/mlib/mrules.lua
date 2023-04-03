@@ -107,6 +107,7 @@ _mr.setrules = function(...)
 				-- placement = awful.placement.maximize_horizontally,
 				-- placement = awful.placement.top ,
 				-- maximize_horizontally = true
+				y = 120,
 				opacity = 0.8,
 				border_width = thm.border_width,
 				border_color = thm.border_normal,
