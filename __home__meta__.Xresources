@@ -1,0 +1,26 @@
+!Xft.dpi: 192
+Xft.dpi: 144
+!Xft.dpi: 209
+!Xft.dpi: 80
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+xterm*dynamicColors: true
+urxvt*dynamicColors: on
+!xscreensaver-auth.default.*.newLoginCommand: dm-tool switch-to-greeter
+! Font for regular texts.
+! Font names are case-insensitive.
+! You can use a comma-separated list of fonts to set a fallback font.
+xscreensaver-auth.default.Dialog.bodyFont: Iosevka 14, dejavu serif 12
+! Window background color. You can use color names.
+! xscreensaver-auth.default.Dialog.background: #7d89c0
+! Main text color. You can also use HEX color codes.
+! xscreensaver-auth.default.Dialog.foreground: #906f7b
+
+#include "/home/meta/.config/mxc/xresources-mx.xdefaults"
+
+

@@ -1,0 +1,109 @@
+
+  -- {
+  -- rule = {},
+  -- properties = {
+  -- border_color = beautiful.fg_normal,
+  -- focus = awful.client.focus.filter,
+  -- raise = true,
+  -- keys = clientkeys,
+  -- buttons = clientbuttons,
+  -- screen = awful.screen.preferred,
+  -- size_hints = true,
+  -- honor_workarea = true,
+  -- honor_padding = true,
+  -- margins = 20,
+  -- placement = awful.placement.no_overlap + awful.placement.no_offscreen,
+  -- }
+  -- },
+  -- Floating clients.
+  -- { rule = { instance = "NO_MTMX" }, properties = { -- floating = true, -- -- width = 792, -- height= 520, width               = ( awful.screen.focused().workarea.width  / 2.078 ), height              = ( awful.screen.focused().workarea.height / 2.118 ), border_width = beautiful.border_width, placement = awful.placement.bottom_left } }, { rule_any = { { maximized = true }, { fullscreen = true } }, properties = { border_width = 0, size_hints_honor = false } },
+      -- instance = { "DTA",  -- Firefox addon DownThemAll. "copyq",  -- Includes session name in class. "pinentry", },
+    -- {
+    --   rule = { instance = "MTX" },
+    --   properties = {
+    --     border_width = 5,
+    --     border_color = beautiful.border_marked,
+    --     size_hints_honor = true,
+    --     maximized = false
+    --   }
+    -- },
+        -- titlebars_enabled = false, floating = true, border_width = beautiful.border_width, border_color = beautiful.tsklist_bg_focus, border_width = 15, width = 810, height= 448,
+        -- size_hints = true, margins = true, width               = ( awful.screen.focused().workarea.width  / 2.105 ), height              = ( awful.screen.focused().workarea.height / 2.118 ), size_hints = true,
+        -- margins = 0, offset = 30, x=40, y=600,
+        -- margin = 20, placement = awful.placement.bottom_left, placement = awful.placement.bottom_left + awful.placement.no_offscreen placement = awful.placement.no_overlap + awful.placement.no_offscreen placement = awful.placement.bottom_left + awful.placement.no_overlap + awful.placement.no_offscreen
+    -- {
+    --   rule_any = { class = name"MTX_UNO" },  instance = name"MTX_UNO" }  },
+    --   properties = {
+    --     -- maximized = true,
+    --     -- floading = false,
+    --     size_hints_honor = true,
+    --     honor_workarea = true,
+    --     honor_padding = true,
+    --     border_width = beautiful.border_width,
+    --     -- width = 500,
+    --     -- height = 300,
+    --     -- placement = awful.placement.bottom_left,
+    --     placement = awful.placement.bottom_right + awful.placement.no_overlap
+    --   }
+    -- },
+    -- { rule = { name = "QUAKE" }, properties = { border_width = 0, size_hints_honor = false  } },
+  -- {
+    -- rule = { class = "M_SYS_LOG" },
+  -- border_color = beautiful.border_normal,
+  -- focus = awful.client.focus.filter,
+  -- raise = true,
+  -- keys = clientkeys,
+  -- buttons = clientbuttons,
+  -- screen = awful.screen.preferred,
+  -- placement = awful.placement.no_overlap+awful.placement.no_offscreen,
+  -- size_hints_honor = false
+  -- {
+  --   rule_any = {
+  --     instance = {
+  --       "Spotify",
+  --       "spotify",  -- Includes session name in class.
+  --     },
+  --     name = {
+  --       "Spotify Premium",
+  --       "Spotify",
+  --     },
+  --     class = {
+  --       "Spotify"
+  --     }
+  --   },
+  --   properties = { tag = root.tags()[5], border_width = 0 }
+  -- },
+  -- Floating clients.
+  -- { rule_any = {
+  --     instance = {
+  --       "DTA",  -- Firefox addon DownThemAll.
+  --       "copyq",  -- Includes session name in class.
+  --       "pinentry",
+  --     },
+  --     class = {
+  --       "Arandr",
+  --       "Blueman-manager",
+  --       "Gpick",
+  --       "Kruler",
+  --       "MessageWin",  -- kalarm.
+  --       "Sxiv",
+  --       "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
+  --       "Wpa_gui",
+  --       "veromix",
+  --       "xtightvncviewer"},
+  --     -- Note that the name property shown in xprop might be set slightly after creation of the client
+  --     -- and the name shown there might not match defined rules here.
+  --     name = {
+  --       "Event Tester",  -- xev.
+  --     },
+  --     role = {
+  --       "clientindow",  -- Thunderbird's calendar.
+  --       "clientManager",  -- Thunderbird's about:config.
+  --       "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
+  --     }
+  --   }, properties = { floating = true }},
+  -- Add titlebars to normal clients and dialogs
+
+  -- Set Firefox to always map on the tag named "2" on screen 1.
+  -- { rule = { class = "Firefox" },
+  --   properties = { screen = 1, tag = "2" } },
