@@ -56,7 +56,7 @@ local exec_keys = leader.bind_actions({
 	{ "l", with_wrapper.shell("xscreensaver-command -lock"), "Lock" },
 	{ "m", with_wrapper.shell("sudo mount /dev/sdc1 ~/mnt"), "Mount" },
 	{ "M", with_wrapper.shell("sudo umount /dev/sdc1"), "Unmount" },
-	{ "p", with_wrapper.shell("picom --experimental-backend & disown"), "Picom" },
+	{ "p", with_wrapper.shell("picom -b"), "Picom" },
 	{ "t", with_wrapper.term(kt_m_opt .. MX.kitty_opt_h .. MX.kitty_opt_c .. "-T rtorrent rtorrent"), "rtorrent" },
 	{ "e", with_wrapper.term(kt_m_opt .. MX.kitty_opt_h .. "-T ranger ranger"), "explore" },
 	-- {"e", with_wrapper.term(kt_m_opt .. "-T ranger ranger"), "explore"},
